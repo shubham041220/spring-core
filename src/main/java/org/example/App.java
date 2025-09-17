@@ -1,5 +1,8 @@
 package org.example;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 /**
  * Hello world!
  *
@@ -8,10 +11,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        Car car=new Car();
-        PEngine petrol=new PEngine();
-        car.setEngine(petrol);
-        car.run();
+        ApplicationContext context=new ClassPathXmlApplicationContext("Beans.xml");
+        Car car1=context.getBean(Car.class);
+        car1.run();
 
 
 
