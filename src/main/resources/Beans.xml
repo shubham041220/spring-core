@@ -5,10 +5,21 @@
       http://www.springframework.org/schema/beans
       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="petrol" class="org.example.PEngine"></bean>
-    <bean id="Diesel" class="org.example.Dengine"></bean>
-    <bean id="Car" class="org.example.Car">
-        <property name="engine" ref="petrol"></property>
+<!--    <bean id="petrol" class="org.example.PEngine"></bean>-->
+<!--    <bean id="petrol" class="com.shubham.practise.Pengine"></bean>-->
+<!--    <bean id="Diesel" class="com.shubham.practise.Dengine"></bean>-->
+<!--&lt;!&ndash;    <bean id="Diesel" class="org.example.Dengine"></bean>&ndash;&gt;-->
+<!--    <bean id="Car" class="com.shubham.practise.Car">-->
+<!--&lt;!&ndash;        <property name="engine" ref="petrol"></property>&ndash;&gt;-->
+<!--        <constructor-arg ref="Diesel"></constructor-arg>-->
+<!--    </bean>-->
+
+    <bean id="bike" class="com.shubham.autowiring.ElectricBike" ></bean>
+<!--    <bean id="PetrolBike" class="com.shubham.autowiring.PetrolBike" autowire-candidate="false"></bean>-->
+<!--    <bean id="HeroHonda" class="com.shubham.autowiring.HeroHonda" autowire="byName">-->
+    <bean id="HeroHonda" class="com.shubham.autowiring.HeroHonda" autowire="constructor">
+
+    <!--        <constructor-arg ref="ElectricBike"></constructor-arg>-->
     </bean>
 
 
